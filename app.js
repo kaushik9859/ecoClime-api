@@ -32,7 +32,7 @@ app.use('/api/chat', require('./routes/chatRoutes'));
 
 // Index route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the AgriTech API' });
+  res.json({ message: 'Welcome to the EcoClime api!' });
 });
 
 // Error handling middleware

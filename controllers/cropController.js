@@ -42,6 +42,17 @@ const getCropRecommendations = async (req, res) => {
   }
 };
 
+const getCropSuggestionHistory = async (req, res) => {
+  // Example: fetch all crop suggestions for the user
+  try {
+    const history = await CropSuggestion.find({ user: req.user._id });
+    res.json(history);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
 module.exports = {
   getCropRecommendations,
   getCropSuggestionHistory,
